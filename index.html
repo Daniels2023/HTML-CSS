@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+  <head>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8"/>
+  <meta name="description" content="Survey page"/>
+  <meta name="author" content="Daniel de Souza"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <h1 id="title">Survey</h1>
+    <p id="description">Thank you for taking your time to fill this survey.</p>
+    <form id="survey-form">
+      <label id="name-label" for="name">Name</label>
+      <input id="name" type="text" placeholder="Full name" required/>
+      <label id="email-label" for="email">Email</label>
+      <input id="email" type="email" placeholder="Please check for a valid email" required/>
+      <label id="number-label" for="age">Age</label>
+      <input id="number" type="number" min="18" max="130" placeholder="Age" value="age" required/>
+      <p>What time of employment are you looking for?</p>
+      <select id="dropdown">
+        <option>Fulltime</option>
+        <option>Partime</option>
+        <option>Casual</option>
+        <option>Contract</option>
+      </select>
+      <p>Related to gender, what is your sense of yourself?</p>
+      <label for="cisgender" class="radio__label">
+        <input class="radio__input" id="cisgender" type="radio" value="cisgender" name="gender"/>
+        <div class="radio__box"></div>Cisgender
+      </label>
+      <label for="transgender" class="radio__label">
+        <input class="radio__input" id="transgender" type="radio" value="transgender" name="gender"/>
+        <div class="radio__box"></div>Transgender
+      </label>
+      <label for="non-binary" class="radio__label">
+         <input class="radio__input" id="non-binary" type="radio" value="non-binary" name="gender"/>
+        <div class="radio__box"></div>Non-binary
+      </label>
+      <p>What do you usually do when you have time for yourself?</p>
+      <label for="sport" class="myCheckbox">
+        <input class="myCheckbox__input" name="mycheckbox__sport" type="checkbox" value="sport" id="sport"/>
+        <div class="checkbox__box"></div>Sport
+      </label>
+      <label for="code" class="myCheckbox">
+        <input class="myCheckbox__input" type="checkbox" name="mycheckbox__code" value="code" id="code"/>
+        <div class="checkbox__box myCode"></div>Code
+      </label>
+      <br>
+      <label for="games" class="myCheckbox">
+        <input class="myCheckbox__input" type="checkbox" name="mycheckbox__games" value="games" id="games"/>
+        <div class="checkbox__box"></div>Game
+      </label>
+      <label for="read" class="myCheckbox">
+        <input class="myCheckbox__input" type="checkbox" name="mycheckbox__read" value="read" id="read"/>
+        <div class="checkbox__box"></div>Read
+      </label>
+      <br>
+      <label for="travel" class="myCheckbox">
+        <input class="myCheckbox__input" type="checkbox" name="mycheckbox__read" value="travel" id="travel"/>
+        <div class="checkbox__box"></div>Travel
+      </label>
+      <label for="songs" class="myCheckbox">
+        <input class="myCheckbox__input" type="checkbox" name="mycheckbox__songs" value="songs" id="songs"/>
+        <div class="checkbox__box"></div>Songs
+      </label>
+      <textarea form="survey-form" id="other-interest" maxlength="360" rows="4" placeholder="any other interest..."></textarea>
+      <button id="submit" type="submit" class="submit">
+        <span class="submit__text">Submit</span>
+        <span class="submit__icon">
+          <ion-icon name="checkbox-outline"></ion-icon>
+        </span>
+      </button>
+    </form>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>  
+  </body>
+</html>
